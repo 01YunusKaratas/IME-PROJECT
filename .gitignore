@@ -1,0 +1,31 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Environment variables
+.env
+
+# Build output
+dist/
+build/
+
+# Temporary files
+tmp/
+temp/
+.cache/
+
+# IDE specific files
+.idea/
+.vscode/
+.DS_Store
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+
+# photo
+/public/assets/

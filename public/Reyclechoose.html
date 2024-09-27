@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="YUNUS EMRE KARATAS">
+    <meta name="keywords" content="Akıllı Bağış Kutuları ile Kıyafet Bağış Yönetim Sistemi">
+
+    <!--Fontavesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/Reyclechoose.css">
+
+    <title>KıyafetBağısı.com</title>
+</head>
+<body>
+
+    <!--Kullancıya ekranda seçim yapması için form göndericez-->
+
+    <form action="/submit" id="recyle-form" method="post">
+        <div class="container" id="recyle-container">
+            <!--Başlık ekledik-->
+            <div class="row mb-3">
+                <h3 id="reycle-h3">Select Product Type</h3>
+            </div>
+            <!--1. satır-->
+            <div class="row">
+            <div class="col-sm-2">
+                <label>
+                    <input type="radio" name="product" value="t-shirt" class="form-check-input">
+                    <img src="/assets/tshirt.avif" alt="t-shirt" class="img-thumbnail">
+                    <p>T-shirt</p>
+                </label>
+            </div>
+            <div class="col-sm-2">
+                <label>
+                    <input type="radio" name="product" value="Shirts" class="form-check-input">
+                    <img src="/assets/shirts.avif" alt="Shirts" class="img-thumbnail">
+                    <p>Shirts</p>
+                </label>
+            </div>
+            <div class="col-sm-2">
+                <label>
+                    <input type="radio" name="product" value="Trousers" class="form-check-input">
+                    <img src="/assets/Trousers.avif" alt="Trousers" class="img-thumbnail">
+                    <p>Trousers</p>
+                </label>
+            </div>
+            <div class="col-sm-2">
+                <label>
+                    <input type="radio" name="product" value="Skirts" class="form-check-input">
+                    <img src="/assets/skirts.avif" alt="Skirts" class="img-thumbnail">
+                    <p>Skirts</p>
+                </label>
+            </div>
+            <div class="col-sm-2">
+                <label>
+                    <input type="radio" name="product" value="Sweaters" class="form-check-input">
+                    <img src="/assets/sweatshirts.avif" alt="Sweaters" class="img-thumbnail">
+                    <p>Sweaters</p>
+                </label>
+            </div>
+           
+            </div>
+            <!--1.satır bitiş-->
+            <!--2. Satır-->
+            <div class="row ">
+                <div class="col-sm-2">
+                    <label>
+                        <input type="radio" name="product" value="coat" class="form-check-input">
+                        <img src="/assets/mont.webp" alt="coat" class="img-thumbnail">
+                        <p>Coat</p>
+                    </label>
+                </div>
+                
+                <div class="col-sm-2">
+                    <label>
+                        <input type="radio" name="product" value="accessories" class="form-check-input">
+                        <img src="/assets/accessories.jfif" alt="accessories" class="img-thumbnail">
+                        <p>Accessories</p>
+                    </label>
+                </div>
+                <div class="col-sm-2">
+                    <label>
+                        <input type="radio" name="product" value="Shoes" class="form-check-input">
+                        <img src="/assets/shoes.avif" alt="Shoes" class="img-thumbnail">
+                        <p>Shoes</p>
+                    </label>
+                </div>
+                
+                <div class="col-sm-2">
+                    <label>
+                        <input type="radio" name="product" value="blanket and quilt" class="form-check-input">
+                        <img src="/assets/blanket.avif" alt="blanket and quilt" class="img-thumbnail">
+                        <p>blanket and quilt</p>
+                    </label>
+                </div>
+                <div class="col-sm-2">
+                     <label>
+                        <input type="radio" name="product" value="sweatpants" class="form-check-input">
+                        <img src="/assets/sweatpants.jfif" alt="sweatpants" class="img-thumbnail">
+                        <p>Sweatpants</p>
+                    </label>
+                </div>
+            </div>
+            <!--2.Satır bitiş-->
+        </div>
+        <!--İleri ve Geri butonlarını yerleştirdim-->
+     <div class="navigation mt-4">
+        <div class="row" id="navigation-row">
+            <div class="col-sm-6 col-auto nav-log"> 
+                <button type="button" class="btn btn-primary" id="back-button">
+                   <span>
+                    <i class="fas fa-undo-alt"></i> <!--Fontavesome geri iconu-->
+                   </span>
+                </button>
+            </div>
+            <div class="col-sm-6 col-auto nav-log">
+                <button type="button" class="btn btn-primary" id="home-button">
+                    <span>
+                        <i class="fa-solid fa-house"></i>
+                    </span>
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+
+    </form>
+
+     
+
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/JS/script.js"></script>
+    <script src="/JS/reycle.js"></script>
+</body>
+</html>

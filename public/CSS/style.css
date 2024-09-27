@@ -1,0 +1,284 @@
+body{
+    animation: colorChange 9s ease-in-out infinite; /* Daha uzun bir süre ve daha pürüzsüz geçiş */
+
+}
+@keyframes colorChange {
+    0% { background-color: #9dae68; } /* Başlangıç rengi */
+    50% { background-color: #8a9d43; } /* Orta renk (daha hafif bir yeşil) */
+    100% { background-color: #9dae68; } /* Bitiş rengi */
+}
+.container{
+    margin: auto;
+    margin-top: 250px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3) ;
+    background-color: whitesmoke;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.container:hover{
+    transform: scale(1.05); /*Boyut %10 artar*/
+    background-color: #82bce2;
+    
+
+}
+#cols{
+    margin: auto;
+
+
+}
+#title1{
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 20px;
+   margin: auto;
+   margin-bottom: 5px;
+   margin-left: 25%;
+}
+.message>p{
+    margin-left:40%;
+    font-size: 24px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.col-auto>button{
+    
+    margin: auto;
+    margin-left: 7rem;
+    border-radius: 5px;
+}
+#verify-code{
+    width: 188px;
+    border-radius: 5px;
+}
+
+
+/*Media for others size
+
+#loginrow{
+    margin-top: 1rem;
+}
+
+.col-sm-6{
+   margin: auto;    
+   margin-top: 1rem;
+}
+.col-sm-6>button{
+    margin-left: 35%;
+}
+#btn1 , #btn2{
+    border-radius: 5px;
+    width: 188px;
+
+}
+*/
+
+@media(max-width:320px){
+    
+    body{
+        width: 95%;
+        margin: auto;
+        margin-top: 50%;
+       
+    }
+    .message>p{
+        
+        font-size: 16px;
+        margin: auto;
+        margin-left: 3rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    #title1{
+        font-size: 14px;
+        margin-left: 3rem;
+    }
+    .col-auto{
+        margin: auto;
+
+    }
+    .col-auto>button{
+        margin-left: 0px;
+        font-size: small;
+        border-radius: 5px;
+    }
+    
+    #verify-code{
+        font-size: small;
+        width: 155px;
+        border-radius: 5px;
+    }
+
+    input[type="text"]{
+        border-radius: 5px;
+        border: 1px ;
+        width: 250px;
+        margin-left: 1rem;
+        
+    }
+  
+
+ 
+    
+}
+@media (min-width: 321px) and (max-width: 376px){
+    
+   body{
+    width: 95%;
+    margin: auto;
+   }
+   .message>p{
+      
+    font-size: 16px;
+    margin: auto;
+    margin-left: 5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   }
+   #title1{
+    font-size: 14px;
+    margin-left: 5rem;
+
+   }
+   .col-auto{
+    margin: auto;
+
+    }
+    .col-auto>button{
+        margin-left: 0px;
+        font-size: medium;
+        border-radius: 5px;
+    }
+   #verify-code{
+    font-size: medium;
+    width: 185px;
+    border-radius: 5px;
+   }
+   input[type="text"]{
+    border-radius: 5px;
+    border: 1px ;
+    width: 310px;
+    margin-left: 1rem;
+    
+}
+
+ 
+    
+}
+@media (min-width: 376px) and (max-width: 426px){
+    body{
+        width: 95%;
+        margin: auto;
+       }
+       .message>p{
+          
+        font-size: 18px;
+        margin: auto;
+        margin-left: 5rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       }
+       #title1{
+        font-size: 16px;
+        margin-left: 6rem;
+    
+       }
+       .col-auto{
+        margin: auto;
+    
+        }
+        .col-auto>button{
+            margin-left: 0px;
+            font-size: medium;
+        }
+       #verify-code{
+        font-size: medium;
+        width: 185px;
+       }
+       input[type="text"]{
+        border-radius: 5px;
+        border: 1px ;
+        width: 350px;
+        margin-left: 1rem;
+        
+    }
+    
+}
+@media (min-width: 426px) and (max-width: 769px){
+    body{
+        width: 95%;
+        margin: auto;
+       }
+       .message>p{
+          
+        font-size: 20px;
+        margin: auto;
+        margin-left: 36%;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       }
+       #title1{
+        font-size: 18px;
+        margin-left: 6rem;
+    
+       }
+       
+       .col-auto{
+        margin: auto;
+        /**/
+        }
+        .col-auto>button{
+            margin-left: 0px;
+            font-size: medium;
+            border-radius: 5px;
+        }
+       #verify-code{
+        font-size: medium;
+        width: 185px;
+        border-radius: 5px;
+       }
+       input[type="text"]{
+        border-radius: 5px;
+        border: 1px ;
+        width: 310px;
+        margin-left: 1rem;
+        
+    }
+    
+}
+@media (min-width: 769px) and (max-width: 1025px){
+    body{
+        width: 95%;
+        margin: auto;
+       }
+       .message>p{
+          
+        font-size: 25px;
+        margin: auto;
+        margin-left: 36%;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       }
+       #title1{
+        font-size: 18px;
+        margin-left: 5rem;
+        margin-bottom: 1rem;
+    
+       }
+       
+       .col-auto{
+        margin: auto;
+        
+        }
+        .col-auto>button{
+            margin-left: 0px;
+            font-size: medium;
+            border-radius: 5px;
+        }
+       #verify-code{
+        font-size: medium;
+        width: 185px;
+        border-radius: 5px;
+       }
+       input[type="text"]{
+        border-radius: 5px;
+        border: 1px ;
+        width: 350px;
+        
+        
+    }
+    
+}
+
+

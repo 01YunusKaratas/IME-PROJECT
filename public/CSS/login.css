@@ -1,0 +1,153 @@
+/* LOGIN PAGE*/
+
+
+#loginrow{
+    margin-top: 1rem;
+}
+
+.col-sm-6{
+   margin: auto;    
+   margin-top: 1rem;
+}
+.col-sm-6>button{
+    margin-left: 35%;
+}
+#btn1 , #btn2{
+    border-radius: 5px;
+    width: 188px;
+
+}
+.navigation{
+    margin: auto;
+    margin-top: 2px;
+    width: 1320px;
+}
+#navigation-row{
+    width:1320px;
+
+}
+.col-sm-6>#back-button{
+    margin-left: 50%;
+}
+.col-sm-6>#home-button{
+    margin-left: 40%;
+}
+
+
+@media(max-width:320px){
+    /*login section*/
+    body{
+        width: 95%;
+        margin: auto;
+    }
+    .col-sm-6>button{
+        margin-left: 20px;
+    }
+    #btn1 , #btn2{
+        border-radius: 5px;
+        width: 155px;
+    
+    }
+    .navigation{
+        width: 304px;
+    }
+    #navigation-row{
+        width: 304px;
+        
+    }
+    
+}   
+
+@media (min-width: 321px) and (max-width: 376px){
+    body{
+        width: 95%;
+        margin: auto;
+    }
+
+    /*login section*/
+    .col-sm-6>button{
+        margin-left: 20px;
+    }
+    #btn1 , #btn2{
+        border-radius: 5px;
+        width: 185px;
+    
+    }
+    .navigation{
+        width: 356.44px;
+    }
+    #navigation-row{
+        width: 356.44px;
+        
+    }
+}
+
+@media (min-width: 376px) and (max-width: 426px){
+    body{
+        width: 95%;
+        margin: auto;
+    }
+
+    .col-sm-6>button{
+        margin-left: 20px;
+    }
+    #btn1 , #btn2{
+        border-radius: 5px;
+        width: 185px;
+    
+    }
+    .navigation{
+        width: 404.31px;
+    }
+    #navigation-row{
+        width: 404.31px;
+        
+    }
+}
+
+@media (min-width: 426px) and (max-width: 769px){
+    body{
+        width: 95%;
+        margin: auto;
+    }
+
+    .col-sm-6>button{
+        margin-left: 70px;
+    }
+    #btn1 , #btn2{
+        border-radius: 5px;
+        width: 185px;
+    
+    }
+    .navigation{
+        width: 729.6px;
+    }
+    #navigation-row{
+        width: 729.6px;
+        
+    }
+
+}
+@media (min-width: 769px) and (max-width: 1025px){
+    body{
+        width: 95%;
+        margin: auto;
+    }
+
+    .col-sm-6>button{
+        margin-left: 140px;
+    }
+    #btn1 , #btn2{
+        border-radius: 5px;
+        width: 185px;
+    
+    }
+    .navigation{
+        width: 960px;
+    }
+    #navigation-row{
+        width: 960px;
+        
+    }
+
+}

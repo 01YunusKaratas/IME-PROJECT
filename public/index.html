@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="YUNUS EMRE KARATAS">
+    <meta name="keywords" content="Akıllı Bağış Kutuları ile Kıyafet Bağış Yönetim Sistemi">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>KıyafetBağısı.com</title>
+</head>
+<body>
+    <div class="container">
+        <div class="message mb-4">
+            <p>Welcome to Smart Textile Box</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 col-lg-4" id="cols">
+                <h2 id="title1">Phone Number Verification</h2>
+                <form id="verification-form" class="row g-3">
+                    <!-- Phone Number Input -->
+                    <div class="col-12 mt-3">
+                        <label for="phone" class="visually-hidden">Phone Number</label>
+                        <input type="text" name="phone" class="form-control" id="phone" placeholder="+90 ile başlayarak telefon numaranızı girin" required>
+                    </div>
+                    <!-- Verification Code Input -->
+                    <div class="col-12 mt-2" style="display: none;" id="code-section">
+                        <label for="code" class="visually-hidden">Verification Code</label>
+                        <input type="text" name="code" class="form-control" id="code" placeholder="Doğrulama kodunu girin" required>
+                    </div>
+                    <div class="col-auto mt-2">
+                        <button type="button" class="btn btn-success mb-3" id="send-code">Send Verification Code</button>
+                        <button type="button" class="btn btn-primary mb-3" id="verify-code" style="display: none;">Verify Code</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/JS/script.js"></script>
+    <script src="/JS/login.js"></script> 
+</body>
+</html>
