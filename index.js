@@ -1,4 +1,4 @@
-require('dotenv').config(); // Sadece bir kez gerekli
+require('dotenv').config(); // .env dosyasını yükler
 const express = require('express');
 const twilio = require('twilio');
 const bodyParser = require('body-parser');
@@ -11,7 +11,20 @@ app.use(bodyParser.json());
 app.use(express.static('public')); // Statik dosyalar için public klasörünü kullan
 
 // Twilio istemcisi oluşturma
-const client = twilio(process.env.ACCOUNT_SID, process.env.AUTH_TOKEN);
+const accountSid = process.env.ACCOUNT_SID;
+const authToken = process.env.AUTH_TOKEN;
+const twilioPhoneNumber = process.env.TWILIO_PHONE_NUMBER;
+
+if (!accountSid || !authToken || !twilioPhoneNumber) {
+    console.error("Twilio kimlik bilgileri eksik. Lütfen .env dosyasını kontrol edin.");
+    process.exit(1); // Hatalı durumda uygulamayı durdur
+}
+
+console.log('Twilio Account SID:', accountSid);
+console.log('Twilio Auth Token:', authToken);
+console.log('Twilio Phone Number:', twilioPhoneNumber);
+
+const client = twilio(accountSid, authToken);
 
 // SMS gönderme
 app.post('/send-verification', (req, res) => {
@@ -28,7 +41,7 @@ app.post('/send-verification', (req, res) => {
     client.messages
         .create({
             body: `Doğrulama kodunuz: ${verificationCode}`,
-            from: process.env.TWILIO_PHONE_NUMBER,
+            from: twilioPhoneNumber,
             to: phoneNumber,
         })
         .then(message => {
