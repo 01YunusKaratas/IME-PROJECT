@@ -196,6 +196,10 @@ body{
     ::placeholder{
         font-size: 14px;
     }
+    #phone{
+        width:300px;
+}
+
     
 }
 @media (min-width: 426px) and (max-width: 769px){
