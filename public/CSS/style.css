@@ -1,3 +1,7 @@
+::placeholder{
+    font-size: 18px;
+}
+
 body{
     animation: colorChange 9s ease-in-out infinite; /* Daha uzun bir süre ve daha pürüzsüz geçiş */
 
@@ -48,26 +52,7 @@ body{
     border-radius: 5px;
 }
 
-
-/*Media for others size
-
-#loginrow{
-    margin-top: 1rem;
-}
-
-.col-sm-6{
-   margin: auto;    
-   margin-top: 1rem;
-}
-.col-sm-6>button{
-    margin-left: 35%;
-}
-#btn1 , #btn2{
-    border-radius: 5px;
-    width: 188px;
-
-}
-*/
+/* Media*/
 
 @media(max-width:320px){
     
@@ -110,6 +95,9 @@ body{
         width: 250px;
         margin-left: 1rem;
         
+    }
+    ::placeholder{
+        font-size: 11px;
     }
   
 
@@ -155,6 +143,16 @@ body{
     margin-left: 1rem;
     
 }
+#phone{
+        width: 300px;
+}
+
+::placeholder{
+    font-size: 14px;
+}
+
+
+
 
  
     
@@ -194,6 +192,9 @@ body{
         width: 350px;
         margin-left: 1rem;
         
+    }
+    ::placeholder{
+        font-size: 14px;
     }
     
 }
@@ -236,6 +237,9 @@ body{
         margin-left: 1rem;
         
     }
+    ::placeholder{
+        font-size: 13px;
+    }
     
 }
 @media (min-width: 769px) and (max-width: 1025px){
@@ -277,6 +281,9 @@ body{
         width: 350px;
         
         
+    }
+    ::placeholder{
+        font-size: 16px;
     }
     
 }
