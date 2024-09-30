@@ -30,35 +30,35 @@
             <div class="row">
             <div class="col-sm-2">
                 <label>
-                    <input type="radio" name="product" value="t-shirt" class="form-check-input">
+                    <input type="radio" name="product" value="t-shirt" id="product1" class="form-check-input">
                     <img src="/assets/tshirt.avif" alt="t-shirt" class="img-thumbnail">
                     <p>T-shirt</p>
                 </label>
             </div>
             <div class="col-sm-2">
                 <label>
-                    <input type="radio" name="product" value="Shirts" class="form-check-input">
+                    <input type="radio" name="product" id="product2"  value="Shirts" class="form-check-input">
                     <img src="/assets/shirts.avif" alt="Shirts" class="img-thumbnail">
                     <p>Shirts</p>
                 </label>
             </div>
             <div class="col-sm-2">
                 <label>
-                    <input type="radio" name="product" value="Trousers" class="form-check-input">
+                    <input type="radio" name="product" id="product3"  value="Trousers" class="form-check-input">
                     <img src="/assets/Trousers.avif" alt="Trousers" class="img-thumbnail">
                     <p>Trousers</p>
                 </label>
             </div>
             <div class="col-sm-2">
                 <label>
-                    <input type="radio" name="product" value="Skirts" class="form-check-input">
+                    <input type="radio" name="product" id="product4"  value="Skirts" class="form-check-input">
                     <img src="/assets/skirts.avif" alt="Skirts" class="img-thumbnail">
                     <p>Skirts</p>
                 </label>
             </div>
             <div class="col-sm-2">
                 <label>
-                    <input type="radio" name="product" value="Sweaters" class="form-check-input">
+                    <input type="radio" name="product" id="product5"  value="Sweaters" class="form-check-input">
                     <img src="/assets/sweatshirts.avif" alt="Sweaters" class="img-thumbnail">
                     <p>Sweaters</p>
                 </label>
@@ -70,7 +70,7 @@
             <div class="row ">
                 <div class="col-sm-2">
                     <label>
-                        <input type="radio" name="product" value="coat" class="form-check-input">
+                        <input type="radio" name="product" id="product6"  value="coat" class="form-check-input">
                         <img src="/assets/mont.webp" alt="coat" class="img-thumbnail">
                         <p>Coat</p>
                     </label>
@@ -78,14 +78,14 @@
                 
                 <div class="col-sm-2">
                     <label>
-                        <input type="radio" name="product" value="accessories" class="form-check-input">
+                        <input type="radio" name="product" id="product7"  value="accessories" class="form-check-input">
                         <img src="/assets/accessories.jfif" alt="accessories" class="img-thumbnail">
                         <p>Accessories</p>
                     </label>
                 </div>
                 <div class="col-sm-2">
                     <label>
-                        <input type="radio" name="product" value="Shoes" class="form-check-input">
+                        <input type="radio" name="product" id="product8"  value="Shoes" class="form-check-input">
                         <img src="/assets/shoes.avif" alt="Shoes" class="img-thumbnail">
                         <p>Shoes</p>
                     </label>
@@ -93,14 +93,14 @@
                 
                 <div class="col-sm-2">
                     <label>
-                        <input type="radio" name="product" value="blanket and quilt" class="form-check-input">
+                        <input type="radio" name="product" id="product9" value="blanket and quilt" class="form-check-input">
                         <img src="/assets/blanket.avif" alt="blanket and quilt" class="img-thumbnail">
                         <p>blanket and quilt</p>
                     </label>
                 </div>
                 <div class="col-sm-2">
                      <label>
-                        <input type="radio" name="product" value="sweatpants" class="form-check-input">
+                        <input type="radio" name="product" id="product10" value="sweatpants" class="form-check-input">
                         <img src="/assets/sweatpants.jfif" alt="sweatpants" class="img-thumbnail">
                         <p>Sweatpants</p>
                     </label>
@@ -108,29 +108,422 @@
             </div>
             <!--2.Satır bitiş-->
         </div>
-        <!--İleri ve Geri butonlarını yerleştirdim-->
-     <div class="navigation mt-4">
-        <div class="row" id="navigation-row">
-            <div class="col-sm-6 col-auto nav-log"> 
-                <button type="button" class="btn btn-primary" id="back-button">
-                   <span>
-                    <i class="fas fa-undo-alt"></i> <!--Fontavesome geri iconu-->
-                   </span>
-                </button>
-            </div>
-            <div class="col-sm-6 col-auto nav-log">
-                <button type="button" class="btn btn-primary" id="home-button">
-                    <span>
-                        <i class="fa-solid fa-house"></i>
-                    </span>
-                </button>
 
+        <!-- Modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="close">&times;</span>
+                <div id="modalText"></div> <!-- Dinamik içerik buraya gelecek --><br>
+                <button type="button" class="btn btn-success" id="addbasket">Add product to cart</button>
             </div>
         </div>
-    </div>
+        
+        <!--sepet Modalı-->
+        <div id="basketModal" class="modal">
+            <div class="modal-content">
+                <span class="basketClose" id="basketClose">&times;</span>
+                <div id="basketModalText"></div> <!-- Dinamik içerik buraya gelecek --><br>
+                <button type="submit" class="btn btn-primary" id="confirm">Confirm</button>  <!--Burada type submit olmalı çünkü database atcaz bilgileri-->
+            </div>
+        </div>
 
-
+        <!--İleri ve Geri butonlarını yerleştirdim-->
+        <div class="navigation mt-4">
+            <div class="row offset-1" id="navigation-row">
+                <div class="col-sm-4 col-auto nav-log"> 
+                    <button type="button" class="btn btn-primary" id="back-button">
+                        <span>
+                            <i class="fas fa-undo-alt"></i> <!-- Fontawesome geri ikon -->
+                        </span>
+                    </button>
+                </div>
+                <div class="col-sm-4 col-auto nav-log"> 
+                    <div style="position: relative; display: inline-block;">
+                        <button type="button" class="btn btn-primary" id="basket-button">
+                            <span>
+                                <i class="fa-solid fa-basket-shopping"></i> <!-- Fontawesome sepet ikon -->
+                            </span>
+                        </button>
+                        <span id="item-count" style="position: absolute; top: -5px; right: -10px; background-color: red; color: white; border-radius: 50%; padding: 2px 6px; font-size: 12px;">0</span>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-auto nav-log">
+                    <button type="button" class="btn btn-primary" id="home-button">
+                        <span>
+                            <i class="fa-solid fa-house"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
     </form>
+
+
+    <script>
+        /*Ürün idlerine göre bilgileri ele aldık*/
+        const p1Dom = document.getElementById('product1');
+        const p2Dom = document.getElementById('product2');
+        const p3Dom = document.getElementById('product3');
+        const p4Dom = document.getElementById('product4');
+        const p5Dom = document.getElementById('product5');
+        const p6Dom = document.getElementById('product6');
+        const p7Dom = document.getElementById('product7');
+        const p8Dom = document.getElementById('product8');
+        const p9Dom = document.getElementById('product9');
+        const p10Dom = document.getElementById('product10');
+
+        /*modal ,span ve text içinde değişim olacağından dolayı bilgileri ele alcaz*/
+        const modalDom = document.getElementById('myModal');
+        const closeSpanDom = document.getElementsByClassName('close')[0];
+        const modalTextDom = document.getElementById('modalText');
+        const colorDom = document.getElementById('color');
+        const accersorriesDom = document.getElementById('accesorries');
+        const sizeDom = document.getElementById('size')
+        const wearDom = document.getElementById('usability');
+
+        /*Kod uzamasın diye arrayler oluştururarak burdan daha kısa çözülebileceiğini düşündüm*/
+        const sameProduct = [p1Dom, p2Dom, p5Dom, p6Dom, p10Dom];
+        const sameproduct2 =[p3Dom,p4Dom]; // pantollar ve etekler için
+
+        //basketmodal için
+        const basketModalDom = document.getElementById('basketModal');
+        const basketCloseSpanDom = document.getElementsByClassName('basketClose')[0];
+        const basketModalTextDom = document.getElementById('basketModalText');
+
+
+  
+
+       function openModal(product){
+        modalDom.style.display="block";
+        modalTextDom.innerHTML=`
+        <label for="size">Size:</label>
+        <select name="size" id="size">
+            <option value="XS">XSmall</option>
+            <option value="S">Small</option>
+            <option value="M">Medium</option>
+            <option value="L">Large</option>
+            <option value="XL">XLarge</option>
+            <option value="XXL">XXLarge</option>
+        </select><br><br>
+        <label for="color">Color:</label>
+        <select name="color" id="color">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="yellow">Yellow</option>
+            <option value="orange">Orange</option>
+            <option value="purple">Purple</option>
+            <option value="pink">Pink</option>
+            <option value="brown">Brown</option>
+            <option value="black">Black</option>
+            <option value="white">White</option>
+        </select><br><br>
+        <label for="usability">Wearability:</label>
+        <select name="usability" id="usability">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+
+        </select>`;
+       }
+
+       sameProduct.forEach(product => {
+            product.addEventListener('change',function(){
+                if(product.checked){ /*Daima tıklandımı diye kontrol etmeliyiz*/
+                    openModal(product); //function called
+                }
+            });
+       });
+
+       //pantol ve etekler için function
+       function openModal2(product){
+            modalDom.style.display="block";
+            modalTextDom.innerHTML=`
+            <label for="size">Size:</label>
+            <select name="size" id="size">
+                <option value="28">28</option>
+                <option value="30">30</option>
+                <option value="32">32</option>
+                <option value="34">34</option>
+                <option value="36">36</option>
+                <option value="38">38</option>
+                <option value="40">40</option>
+                <option value="42">42</option>
+                <option value="44">44</option>
+                <option value="46">46</option>
+            </select><br><br>
+
+            <label for="color">Color:</label>
+            <select name="color" id="color">
+                <option value="black">Black</option>
+                <option value="navy">Navy</option>
+                <option value="gray">Gray</option>
+                <option value="khaki">Khaki</option>
+                <option value="beige">Beige</option>
+                <option value="brown">Brown</option>
+                <option value="white">White</option>
+                <option value="blue">Blue</option>
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="pink">Pink</option>
+                <option value="purple">Purple</option>
+                <option value="orange">Orange</option>
+                <option value="lightblue">Light Blue</option>
+                <option value="lavender">Lavanta</option>
+            </select><br><br>
+                <label for="usability">Wearability:</label>
+            <select name="usability" id="usability">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>`;
+
+            
+       }
+
+       sameproduct2.forEach(product => {
+        product.addEventListener('change',function(){
+            if(product.checked){ //kontrol yapıldı
+                openModal2(product);
+            }
+            });
+       });
+
+    
+       p7Dom.addEventListener('change',function(){
+            if(p7Dom.checked){//kontrol yaptık yine
+                modalDom.style.display="block";
+                modalTextDom.innerHTML=`
+            <label for="accesorries">Accesorries:</label>
+        <select name="accesorries" id="accesorries">
+            <option value="handbag">Handbag</option>
+            <option value="backpack">Backpack</option>
+            <option value="clutch">Clutch</option>
+            <option value="crossbody">Crossbody Bag</option>
+            <option value="scarf">Scarf</option>
+            <option value="beanie">Beanie</option>
+            <option value="gloves">Gloves</option>
+            <option value="belt">Belt</option>
+            <option value="hat">Hat</option>
+            <option value="hairband">Hairband</option>
+            <option value="brooch">Brooch</option>
+            <option value="sunglasses">Sunglasses</option>
+            <option value="shawl">Shawl</option>
+            <option value="necklace">Necklace</option>
+            <option value="earrings">Earrings</option>
+            <option value="ring">Ring</option>
+            <option value="bracelet">Bracelet</option>
+            <option value="keychain">Keychain</option>
+            <option value="umbrella">Umbrella</option>
+        </select><br><br>
+        <label for="color">Color:</label>
+        <select name="color" id="color">
+            <option value="black">Black</option>
+            <option value="navy">Navy Blue</option>
+            <option value="gray">Gray</option>
+            <option value="beige">Beige</option>
+            <option value="brown">Brown</option>
+            <option value="white">White</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="pink">Pink</option>
+            <option value="purple">Purple</option>
+            <option value="yellow">Yellow</option>
+            <option value="orange">Orange</option>
+            <option value="lightblue">Light Blue</option>
+        </select><br><br>
+        <label for="usability">Wearability:</label>
+        <select name="usability" id="usability">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+
+        </select>`;
+        }
+       });
+       
+       p8Dom.addEventListener('change',function(){
+            if(p8Dom.checked){
+                modalDom.style.display="block";
+                modalTextDom.innerHTML=` 
+                <label for="size">Size:</label>
+        <select name="size" id="size">
+                <option value="36">36</option>
+                <option value="36.5">36.5</option>
+                <option value="37">37</option>
+                <option value="37.5">37.5</option>
+                <option value="38">38</option>
+                <option value="38.5">38.5</option>
+                <option value="39">39</option>
+                <option value="39.5">39.5</option>
+                <option value="40">40</option>
+                <option value="40.5">40.5</option>
+                <option value="41">41</option>
+                <option value="41.5">41.5</option>
+                <option value="42">42</option>
+                <option value="42.5">42.5</option>
+                <option value="43">43</option>
+                <option value="43.5">43.5</option>
+                <option value="44">44</option>
+                <option value="44.5">44.5</option>
+                <option value="45">45</option>
+        </select><br><br>
+        <label for="color">Color:</label>
+        <select name="color" id="color">
+            <option value="black">Black</option>
+            <option value="navy">Navy Blue</option>
+            <option value="gray">Gray</option>
+            <option value="beige">Beige</option>
+            <option value="brown">Brown</option>
+            <option value="white">White</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="pink">Pink</option>
+            <option value="purple">Purple</option>
+            <option value="yellow">Yellow</option>
+            <option value="orange">Orange</option>
+            <option value="lightblue">Light Blue</option>
+        </select><br><br>
+        <label for="usability">Wearability:</label>
+        <select name="usability" id="usability">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+
+        </select>`;
+            }
+       })
+
+       p9Dom.addEventListener('change',function(){
+            if(p9Dom.checked){ //kontrol ettimm
+                modalDom.style.display="block";
+                modalTextDom.innerHTML=`
+                <label for="usability">Wearability:</label>
+                <select name="usability" id="usability">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+
+                </select>`
+
+            }
+       });
+
+    //sepet butonuna tıklayınca modal açılsın yine 
+    document.getElementById('basket-button').addEventListener('click',function(){
+        
+        basketModalDom.style.display="block"; //burada basket modalı açtık 
+    });
+    
+   
+
+    // Kullanıcı (x) işaretine basarsa modal kapanıyor
+    closeSpanDom.onclick = function() { // Parantezlerden kurtar
+        modalDom.style.display = "none";
+       
+    };
+
+    basketCloseSpanDom.onclick = function() {
+        basketModalDom.style.display="none";
+    }
+
+
+// Kullanıcı modal kutusunun dışına tıklarsa modal kapanıyor
+    window.onclick = function (event) {
+        if (event.target === modalDom) {
+            modalDom.style.display = "none";
+        }else if(event.target === basketModalDom){
+            basketModalDom.style.display="none";
+        }
+    };
+
+
+let infoarray = []; // Sepetteki ürünleri tutan dizi
+let counter = 0;
+
+document.getElementById('addbasket').addEventListener('click', function() {
+    let selectedProductId = document.querySelector('input[name="product"]:checked').id; // Seçili ürün ID'si
+    let selectedProductValue = document.querySelector('input[name="product"]:checked').value; // Seçili ürünün value değeri
+
+
+    let product = { name: '', size: '', color: '', wearability: '' };
+    
+
+    // Ürün ID'sine göre işlem yapıyoruz
+    if (selectedProductId === 'product1' || 
+        selectedProductId === 'product2' ||
+        selectedProductId === 'product3' || 
+        selectedProductId === 'product4' ||
+        selectedProductId === 'product5' || 
+        selectedProductId === 'product6' ||
+        selectedProductId === 'product8' ||
+        selectedProductId === 'product10') {
+        
+        // Burada product'a bilgileri atıyoruz
+        product = {
+            name: selectedProductValue,
+            size: document.querySelector('select[name="size"]').value, // Boyut bilgisini al
+            color: document.querySelector('select[name="color"]').value, // Renk bilgisini al
+            wearability: document.querySelector('select[name="usability"]').value // 'usability' olarak erişim
+        };
+
+        // Ürünü sepete ekle
+        infoarray.push(product);
+        counter++;
+
+    } else if (selectedProductId === 'product7') {
+        let selectedAccesorries = document.querySelector('select[name="accesorries"]').value;
+        product = {
+            name: selectedAccesorries,
+            size: null, // Boyut bilgisini al
+            color: document.querySelector('select[name="color"]').value, // Renk bilgisini al
+            wearability: document.querySelector('select[name="usability"]').value // 'usability' olarak erişim
+        };
+
+        // Aksesuarı sepete ekle
+        infoarray.push(product);
+        counter++;
+    }
+
+    // Sepeti güncelliyoruz
+    updateBasket();
+});
+
+// Sepet güncelleme fonksiyonu
+function updateBasket() {
+    console.log(infoarray); // Sepetteki ürünleri kontrol et
+    document.getElementById('basketModalText').innerHTML = ''; // Burada içini temizledik.
+
+    infoarray.forEach((item, index) => {
+        let itemText = `${index + 1}. ${item.name}`;
+        if (item.size) itemText += ` - Size: ${item.size}`;
+        if (item.color) itemText += ` - Color: ${item.color}`;
+        if (item.wearability) itemText += ` - Wearability: ${item.wearability}`;
+        document.getElementById('basketModalText').innerHTML += `<p>${itemText}</p>`; // Burada başta oluşturduğum itemText'e eklemeler yaptık ve en son halini gösterdim
+    });
+
+    // Sepetteki ürün sayısını güncelle
+    document.getElementById('item-count').innerText = counter;
+}
+
+    
+    
+    
+ 
+ 
+
+    </script>
 
      
 
