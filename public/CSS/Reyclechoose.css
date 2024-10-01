@@ -30,27 +30,40 @@
 }
 
 
-.navigation{
+.navigation {
     margin: auto;
-    margin-top: 2px;
-    width: 1320px;
-    
+    margin-top: 20px; /* Adjust margin as needed */
+    max-width: 1320px; /* Set max width for better responsiveness */
 }
-#navigation-row{
-    width:1320px;
-    
 
+#navigation-row {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly between buttons */
+    width: 100%;
 }
-.col-sm-6>#back-button{
-    margin-left: 50%;
+.nav-log {
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center align buttons */
+    align-items: center; /* Center align vertically */
 }
-.col-sm-6>#home-button{
-    margin-left: 40%;
+
+
+.col-sm-4>#back-button{
+    margin-right: 50%;
+}
+
+
+.col-sm-4>#home-button{
+    margin-left:50%;
 }
 
 #home-button,#basket-button,#back-button{
     margin: auto;
     margin-left: 30px;
+}
+
+#basket-button {
+    position: relative; /* Needed for positioning item count */
 }
 
 
@@ -75,7 +88,7 @@
         margin: auto;
         overflow-y: auto; /* Dikey kaydırma çubuğu ekler */
     }
-    .col-sm-6>button{
+    .col-sm-4>button{
         margin-left: 20px;
     }
 
@@ -85,6 +98,7 @@
     }
     #navigation-row{
         width:304px;
+    
         
     }
 }
@@ -112,12 +126,13 @@
 
 
 
-    .col-sm-6>button{
+    .col-sm-4>button{
         margin-left: 20px;
     }
 
     .navigation{
         width:356.44px;
+        
         
     }
     #navigation-row{
@@ -146,7 +161,7 @@
         width: 95%;
         margin: auto;
     }
-    .col-sm-6>button{
+    .col-sm-4>button{
         margin-left: 20px;
     }
 
@@ -197,7 +212,7 @@
 
 
 
-    .col-sm-6>button{
+    .col-sm-4>button{
         margin-left: 20px;
     }
 
@@ -234,7 +249,7 @@
 
 
 
-    .col-sm-6>button{
+    .col-sm-4>button{
         margin-left: 20px;
     }
 
@@ -260,7 +275,9 @@
     left: 0;
     top: 0;
     background-color: rgba(0,0,0,0.5);
+    overflow-y: scroll;
 }
+
 .modal-content {
     background-color: #fff;
     margin: 10% auto;
@@ -391,6 +408,13 @@
         font-size: 24px; /* Butonun boyutu */
         cursor: pointer;
     }
+    #basketClose{
+        position: absolute;
+        top: 20px; /* Butonun modal içeriğinin üstüne yaklaşmasını sağlar */
+        right: 8px; /* Butonu sağa yaslamak için kullanılır */
+        font-size: 24px; /* Butonun boyutu */
+        cursor: pointer;
+    }
  
 
 
@@ -419,6 +443,13 @@
     }
     
     #close {
+        position: absolute;
+        top: 20px; /* Butonun modal içeriğinin üstüne yaklaşmasını sağlar */
+        right: 8px; /* Butonu sağa yaslamak için kullanılır */
+        font-size: 24px; /* Butonun boyutu */
+        cursor: pointer;
+    }
+    #basketClose{
         position: absolute;
         top: 20px; /* Butonun modal içeriğinin üstüne yaklaşmasını sağlar */
         right: 8px; /* Butonu sağa yaslamak için kullanılır */
