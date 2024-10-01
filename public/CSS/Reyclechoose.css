@@ -313,3 +313,117 @@
 #close,#basketClose{
     margin-top: -30px;
 }
+
+
+@media (max-width: 480px) { /* Mobile */
+
+    body{
+        width: 95%;
+        margin: auto;   
+    }
+    
+    .modal{
+        width:100%;
+    }
+    .modal-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+    }
+    #addbasket{
+        width: 80%;
+        max-width: 150px;
+        margin: 0 auto;
+        font-size: 10px;
+    }
+    #confirm{
+        width: 80%;
+        max-width: 150px;
+        margin: 0 auto;
+        font-size: 10px;
+
+    }
+    #close {
+        position: absolute;
+        top:18px; /* Butonun modal içeriğinin üstüne yaklaşmasını sağlar */
+        right: 5px; /* Butonu sağa yaslamak için kullanılır */
+        font-size: 24px; /* Butonun boyutu */
+        cursor: pointer;
+    }
+    #basketClose{
+      position: absolute;
+        top:18px; /* Butonun modal içeriğinin üstüne yaklaşmasını sağlar */
+        right: 5px; /* Butonu sağa yaslamak için kullanılır */
+        font-size: 24px; /* Butonun boyutu */
+        cursor: pointer;
+    
+    }
+
+}
+@media (min-width: 481px) and (max-width: 768px) { /* Tablets */
+    body{
+        width: 95%;
+        margin: auto;
+    }
+    
+    .modal{
+        width:100%;
+    }
+    .modal-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+    }
+    #addbasket,#confirm{
+        width: 80%;
+        max-width: 150px;
+        margin: 0 auto;
+        font-size: 14px;
+    }
+    #close {
+        position: absolute;
+        top: 20px; /* Butonun modal içeriğinin üstüne yaklaşmasını sağlar */
+        right: 8px; /* Butonu sağa yaslamak için kullanılır */
+        font-size: 24px; /* Butonun boyutu */
+        cursor: pointer;
+    }
+ 
+
+
+}
+@media (min-width: 769px) { /* Desktop */
+    body{
+        width: 95%;
+        margin: auto;
+    }
+    
+    .modal{
+        width:100%;
+    }
+    .modal-content {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+    }
+    #addbasket,#confirm{
+        width: 80%;
+        max-width: 150px;
+        margin: 0 auto;
+        font-size: 14px;
+    }
+    
+    #close {
+        position: absolute;
+        top: 20px; /* Butonun modal içeriğinin üstüne yaklaşmasını sağlar */
+        right: 8px; /* Butonu sağa yaslamak için kullanılır */
+        font-size: 24px; /* Butonun boyutu */
+        cursor: pointer;
+    }
+
+}
