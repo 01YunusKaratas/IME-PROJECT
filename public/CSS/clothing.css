@@ -1,0 +1,462 @@
+/*Geri dönüşüm sayfası csslerini buaraya yazdım karışmasın diye*/
+
+#recyle-container{
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3) ;
+    background-color: whitesmoke;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+#recyle-container:hover{
+    transform: scale(1.04); /*Boyut %10 artar*/
+    background-color: #82bce2;
+    
+
+}
+#reycle-h3{
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.col-sm-2{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding:0px;
+    margin: 15px;
+
+}
+.img-thumbnail{
+    width: 124px;
+    height: 182px;
+}
+
+
+.navigation {
+    margin: auto;
+    margin-top: 20px; /* Adjust margin as needed */
+    max-width: 1320px; /* Set max width for better responsiveness */
+}
+
+#navigation-row {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly between buttons */
+    width: 100%;
+}
+.nav-log {
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center align buttons */
+    align-items: center; /* Center align vertically */
+}
+
+
+.col-sm-4>#back-button{
+    margin-right: 50%;
+}
+
+
+.col-sm-4>#home-button{
+    margin-left:50%;
+}
+
+#home-button,#basket-button,#back-button{
+    margin: auto;
+    margin-left: 30px;
+}
+
+#basket-button {
+    position: relative; /* Needed for positioning item count */
+}
+
+
+@media(max-width:320px){
+    #recyle-container{
+        margin: auto;
+        margin-top: 50px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3) ;
+        background-color: whitesmoke;
+        margin-left:1px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    #recyle-container:hover{
+        transform: scale(1.0150); /*Boyut %10 artar*/
+        background-color: #82bce2;
+        
+    
+    }
+    body{
+        width: 95%;
+        margin: auto;
+        overflow-y: auto; /* Dikey kaydırma çubuğu ekler */
+    }
+    .col-sm-4>button{
+        margin-left: 20px;
+    }
+
+    .navigation{
+        width: 304px;
+        
+    }
+    #navigation-row{
+        width:304px;
+    
+        
+    }
+}
+
+@media (min-width: 321px) and (max-width: 376px){
+    #recyle-container{
+        margin: auto;
+        margin-top: 50px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3) ;
+        background-color: whitesmoke;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    #recyle-container:hover{
+        transform: scale(1.0150); /*Boyut %10 artar*/
+        background-color: #82bce2;
+        
+    
+    }
+    body{
+        width: 95%;
+        margin: auto;
+    }
+    
+    
+
+
+
+    .col-sm-4>button{
+        margin-left: 20px;
+    }
+
+    .navigation{
+        width:356.44px;
+        
+        
+    }
+    #navigation-row{
+        width:356.44px;
+        
+    }
+
+}
+
+
+@media (min-width: 376px) and (max-width: 426px){
+    #recyle-container{
+        margin: auto;
+        margin-top: 50px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3) ;
+        background-color: whitesmoke;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    #recyle-container:hover{
+        transform: scale(1.0150); /*Boyut %10 artar*/
+        background-color: #82bce2;
+        
+    
+    }
+    body{
+        width: 95%;
+        margin: auto;
+    }
+    .col-sm-4>button{
+        margin-left: 20px;
+    }
+
+    .navigation{
+        width:404px;
+        
+    }
+    #navigation-row{
+        width:404px;
+        
+    }
+
+}
+
+
+@media (min-width: 426px) and (max-width: 769px){
+    #recyle-container{
+        margin: auto;
+        margin-top: 50px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3) ;
+        background-color: whitesmoke;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    #recyle-container:hover{
+        transform: scale(1.0150); /*Boyut %10 artar*/
+        background-color: #82bce2;
+        
+    
+    }
+    body{
+        width: 95%;
+        margin: auto;
+    }
+
+    #reycle-h3{
+        text-align: center;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin: auto;
+    }
+
+    .col-sm-2{
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding:0px;
+        margin: 10px;
+    
+    }
+
+
+
+    .col-sm-4>button{
+        margin-left: 20px;
+    }
+
+    .navigation{
+        width:304px;
+        
+    }
+    #navigation-row{
+        width:304px;
+        
+
+    }
+}
+
+@media(min-width:769px) and (max-width:1025px){
+    body{
+        width: 95%;
+        margin: auto;
+    }
+
+    #reycle-h3{
+        text-align: center;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin: auto;
+    }
+
+    .col-sm-2{
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding:0px;
+        margin: 10px;
+    
+    }
+
+
+
+    .col-sm-4>button{
+        margin-left: 20px;
+    }
+
+    .navigation{
+        width:304px;
+        
+    }
+    #navigation-row{
+        width:304px;
+        
+
+    }
+
+}
+
+
+
+/*Modal ekranı ayarları*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.5);
+    overflow-y: scroll;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 410px;
+    margin-bottom: -20px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*Burada scrool ekledim optionlara*/
+
+#color,#accesorries,#size{
+    overflow-y: scroll;
+}
+#basketClose{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 410px;
+    margin-bottom: -20px;
+}
+
+#basketClose:hover,#basketClose:focus{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#addbasket,#confirm{
+    width:400px;
+}
+
+#close,#basketClose{
+    margin-top: -30px;
+}
+
+
+@media (max-width: 480px) { /* Mobile */
+
+    body{
+        width: 95%;
+        margin: auto;   
+    }
+    
+    .modal{
+        width:100%;
+    }
+    .modal-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+    }
+    #addbasket{
+        width: 80%;
+        max-width: 150px;
+        margin: 0 auto;
+        font-size: 10px;
+    }
+    #confirm{
+        width: 80%;
+        max-width: 150px;
+        margin: 0 auto;
+        font-size: 10px;
+
+    }
+    #close {
+        position: absolute;
+        top:18px; /* Butonun modal içeriğinin üstüne yaklaşmasını sağlar */
+        right: 5px; /* Butonu sağa yaslamak için kullanılır */
+        font-size: 24px; /* Butonun boyutu */
+        cursor: pointer;
+    }
+    #basketClose{
+      position: absolute;
+        top:18px; /* Butonun modal içeriğinin üstüne yaklaşmasını sağlar */
+        right: 5px; /* Butonu sağa yaslamak için kullanılır */
+        font-size: 24px; /* Butonun boyutu */
+        cursor: pointer;
+    
+    }
+
+}
+@media (min-width: 481px) and (max-width: 768px) { /* Tablets */
+    body{
+        width: 95%;
+        margin: auto;
+    }
+    
+    .modal{
+        width:100%;
+    }
+    .modal-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+    }
+    #addbasket,#confirm{
+        width: 80%;
+        max-width: 150px;
+        margin: 0 auto;
+        font-size: 14px;
+    }
+    #close {
+        position: absolute;
+        top: 20px; /* Butonun modal içeriğinin üstüne yaklaşmasını sağlar */
+        right: 8px; /* Butonu sağa yaslamak için kullanılır */
+        font-size: 24px; /* Butonun boyutu */
+        cursor: pointer;
+    }
+    #basketClose{
+        position: absolute;
+        top: 20px; /* Butonun modal içeriğinin üstüne yaklaşmasını sağlar */
+        right: 8px; /* Butonu sağa yaslamak için kullanılır */
+        font-size: 24px; /* Butonun boyutu */
+        cursor: pointer;
+    }
+ 
+
+
+}
+@media (min-width: 769px) { /* Desktop */
+    body{
+        width: 95%;
+        margin: auto;
+    }
+    
+    .modal{
+        width:100%;
+    }
+    .modal-content {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+    }
+    #addbasket,#confirm{
+        width: 80%;
+        max-width: 150px;
+        margin: 0 auto;
+        font-size: 14px;
+    }
+    
+    #close {
+        position: absolute;
+        top: 20px; /* Butonun modal içeriğinin üstüne yaklaşmasını sağlar */
+        right: 8px; /* Butonu sağa yaslamak için kullanılır */
+        font-size: 24px; /* Butonun boyutu */
+        cursor: pointer;
+    }
+    #basketClose{
+        position: absolute;
+        top: 20px; /* Butonun modal içeriğinin üstüne yaklaşmasını sağlar */
+        right: 8px; /* Butonu sağa yaslamak için kullanılır */
+        font-size: 24px; /* Butonun boyutu */
+        cursor: pointer;
+    }
+
+}
+
+/*Ek olarak eklenen kod parçaları için*/
